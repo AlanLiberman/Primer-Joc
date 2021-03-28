@@ -4,7 +4,7 @@ var ball
 var timer = 0.0
 
 func _ready():
-	ball = $Sprite
+	ball = $RigidBody2D
 	$AnimatedSprite.play("standby")
 	ball.visible = false
 
