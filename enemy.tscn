@@ -41,7 +41,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 70.882, 101.806 )
+extents = Vector2( 70.1119, 99.4273 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 697.271, 51.3104 )
@@ -52,7 +52,7 @@ collision_layer = 8
 script = ExtResource( 1 )
 
 [node name="Ball" type="KinematicBody2D" parent="."]
-position = Vector2( -2.73001, -24.9176 )
+position = Vector2( 1.43219, -33.242 )
 collision_layer = 512
 __meta__ = {
 "_edit_group_": true
@@ -80,7 +80,7 @@ shape = SubResource( 7 )
 collision_layer = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( 627.828, -14.8319 )
+position = Vector2( 630.206, -13.6427 )
 shape = SubResource( 8 )
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_Area2D_body_exited"]

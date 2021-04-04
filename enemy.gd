@@ -15,7 +15,7 @@ func _on_Area2D_body_entered(body):
 	velocityball = Vector2.RIGHT
 	
 func _process(delta):
-	ball.position += velocityball * 8
+	ball.position += velocityball * 8.5
 
 func _on_Area2D_body_exited(body):
 	$AnimatedSprite.play("standby")
