@@ -28,9 +28,11 @@ func _process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		velocity.y += -250
 	
-	if position.x >= 5075:
+	if position.x >= 5075 and position.y >= 0:
 		position = Vector2(-8000,-600)
 		$Sprite.visible = true
+	if position.x >= -4000:
+		$Sprite.visible = false
 		
 	if position.y >= 1500:
 		life -= 1000
@@ -57,4 +59,3 @@ func animate(velocity:Vector2):
 		$AnimatedSprite.play("run")
 	if velocity.y > 0:
 		$AnimatedSprite.play("fall")
-
