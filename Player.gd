@@ -8,6 +8,7 @@ func _ready():
 	$Sprite.visible = false
 	
 func _process(delta):
+	
 	velocity.x = 0
 	$AnimatedSprite.flip_v = false
 	if Input.is_action_just_pressed("start"):
