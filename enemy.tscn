@@ -10,33 +10,33 @@ radius = 67.5954
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 768, 192, 256 )
+region = Rect2( 0, 0, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 192, 768, 192, 256 )
+region = Rect2( 0, 768, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 384, 768, 192, 256 )
+region = Rect2( 192, 768, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 192, 256 )
+region = Rect2( 384, 768, 192, 256 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "attack",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "standby",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "attack",
 "speed": 5.0
 } ]
 
@@ -44,7 +44,7 @@ animations = [ {
 extents = Vector2( 70.1119, 99.4273 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 697.271, 51.3104 )
+extents = Vector2( 797.663, 51.3104 )
 
 [node name="Enemy" type="StaticBody2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -80,7 +80,7 @@ shape = SubResource( 7 )
 collision_layer = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( 630.206, -13.6427 )
+position = Vector2( 738.149, -16.8175 )
 shape = SubResource( 8 )
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_Area2D_body_exited"]

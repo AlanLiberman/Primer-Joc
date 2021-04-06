@@ -11,7 +11,6 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	ball.visible = true
 	$AnimatedSprite.play("attack")
-	print('why')
 	velocityball = Vector2.RIGHT
 	
 func _process(delta):
